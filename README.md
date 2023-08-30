@@ -23,7 +23,7 @@ $ python3 hashwhisper.py -w /usr/share/wordlist/rockyou.txt -H /home/kali/hash.t
 1. Navigate to the project directory: 
 1. Install the required dependencies: 
 ```
-git clone https://github.com/MalwareEZ/HashWhisper/tree/main
+git clone https://github.com/MalwareEZ/HashWhisper.git
 cd HashWhisper
 pip install -r requirements.txt
 ```
