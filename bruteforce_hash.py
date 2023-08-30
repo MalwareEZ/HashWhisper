@@ -27,16 +27,16 @@ def main():
 
         print(f"{Fore.BLUE}[*]{Fore.WHITE} Loading...")
         
-        wordlist_progress = tqdm(wordlist_lines, desc="wordlist progress", unit="mot")
+        wordlist_progress = tqdm(wordlist_lines, desc="wordlist progress", unit="word")
 
-        for mot_line in wordlist_progress:
-            mot_sep = mot_line.strip()
-            mot_hashed = hashlib.md5(mot_sep.encode("utf-8")).hexdigest()
+        for word_line in wordlist_progress:
+            word_sep = word_line.strip()
+            word_hashed = hashlib.md5(word_sep.encode("utf-8")).hexdigest()
 
 
-            if any(mot_hashed == hash_line.strip() for hash_line in hash_lines):
+            if any(word_hashed == hash_line.strip() for hash_line in hash_lines):
                 wordlist_progress.close()
-                print(f"\n{Fore.GREEN}[+]{Fore.WHITE} Password found :", mot_sep)
+                print(f"\n{Fore.GREEN}[+]{Fore.WHITE} Password found :", word_sep)
                 return True
 
         wordlist_progress.close()
