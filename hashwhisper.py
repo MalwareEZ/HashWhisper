@@ -41,7 +41,7 @@ def main():
             if any(word_hashed == hash_line.strip() for hash_line in hash_lines):
                 wordlist_progress.close()
                 print(f"\n{Fore.GREEN}[+]{Fore.WHITE} Password found :", word_sep)
-                return True
+                return
 
         wordlist_progress.close()
         print(f"{Fore.RED}[x]{Fore.WHITE} Password not found...")
