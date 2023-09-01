@@ -5,6 +5,7 @@ import banner_md5
 from colorama import Fore
 from tqdm import tqdm
 
+# adding arguments
 def main():
     parser = argparse.ArgumentParser(description="tool to crack an md5 hash")
     parser.add_argument("-w", "--wordlist", dest="wordlist", help="wordlist path", required=True)
